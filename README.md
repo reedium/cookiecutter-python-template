@@ -103,3 +103,47 @@ The config settings can be defined either through environment variables, such as
 API_KEY='MY_ACTUAL_KEY'
 MORE_SETTINGS__FOO='OTHER'
 ```
+
+## Example Installation and Verification
+
+The following assumes the repo is local. Replace `cookiecutter-python-project` with the repo git URL to pull from an online repo.
+
+```
+|--% cookiecutter cookiecutter-python-project
+package_display_name [Package Name]:
+package_name [package_name]:
+package_description [Package description]:
+package_command [package_name]:
+author_email [author@website.com]:
+author_name [Project Author]:
+git_branch [main]:
+github_repo_user []:
+github_repo_name []:
+python_version [^3.7]:
+Creating virtualenv package-name-PofO6c_S-py3.10 in /home/user/.cache/pypoetry/virtualenvs
+Updating dependencies
+Resolving dependencies... (4.3s)
+...
+initial branch for the project to useInstalling the current project: package_name (0.0.1)
+Initialized empty Git repository in /home/user/package_name/.git/
+pre-commit installed at .git/hooks/pre-commit
+
+|--% cd package_name
+
+|--% poetry shell
+Spawning shell within /home/user/.cache/pypoetry/virtualenvs/package-name-PofO6c_S-py3.10
+
+|--% package_name --version
+package_name 0.0.1
+
+|--% pytest -v
+Test session starts (platform: linux, Python 3.10.5, pytest 7.1.2, pytest-sugar 0.9.4)
+cachedir: .pytest_cache
+rootdir: /home/user/package_name
+plugins: sugar-0.9.4
+collecting ...
+ tests/test_project.py::test_version ✓                                        100% ██████████
+
+Results (0.01s):
+       1 passed
+```
