@@ -46,7 +46,7 @@ This will take you to a project setup asking for:
 - `package_command` - This will configure poetry to allow calling the package, `package_name/console:entry_point`, via this command. Generally, this would be the same value as `package_name`
 - `author_name` - The author of the package
 - `author_email` - The email for the author
-- `git_branch` - The branch to utilize when performing `git init -b <branch>`
+- `git_branch` - The branch to utilize when performing `git init -b <branch>` and package building
 - `github_repo_name` - For documentation, such as URLs to the issue tracker
 - `github_user_name` - For documentation, such as URLs to the issue tracker
 - `python_version`- The Python version that should be defined in `pyproject.toml`
