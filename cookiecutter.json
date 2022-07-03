@@ -7,7 +7,7 @@
   "author_email": "author@website.com",
   "author_name": "Project Author",
 
-  "license": ["GNU GPL v3.0", "MIT", "None"],
+  "license": ["GPLv3", "MIT", "None"],
 
   "git_branch": "main",
   "github_repo_user": "",
