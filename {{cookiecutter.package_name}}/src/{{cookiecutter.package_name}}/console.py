@@ -1,7 +1,11 @@
+import argparse
+
 from pydantic import (
     BaseModel,
     BaseSettings,
 )
+
+from {{cookiecutter.package_name}} import version
 
 
 class SubModel(BaseModel):
@@ -18,7 +22,21 @@ class Config(BaseSettings):
         env_nested_delimiter = "__"
 
 
+def parse_arguments():
+    parser = argparse.ArgumentParser(
+        description="""
+        {{cookiecutter.package_description}}
+        """,
+    )
+    parser.add_argument(
+        "--version", action="version", version=f"package_name {version}"
+    )
+
+    return parser.parse_args()
+
+
 def entry_point():
+    args = parse_arguments()
     config = Config()
 
 
