@@ -1,0 +1,16 @@
+{
+  "package_display_name": "Package Name",
+  "package_name": "package_name",
+  "package_description": "Package description",
+  "package_command": "package_name",
+
+  "author_email": "author@website.com",
+  "author_name": "Project Author",
+
+  "github_repo_user": "",
+  "github_repo_name": "",
+
+  "python_version": "^3.7",
+
+  "_extensions": ["jinja2_time.TimeExtension"]
+}
